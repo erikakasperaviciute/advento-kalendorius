@@ -1,0 +1,167 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.red-bg {
+    background-color: rgba(250 0 0 / 0.7);
+}
+
+.green-bg {
+    background-color: rgba(4 130 4 / 0.7);
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    background: url("./mel-poole-LUPXhXj2ip0-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-title {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0;
+    padding-top: 25px;
+
+
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 150px);
+    gap: 8px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+.door {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 150px;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+
+}
+
+.day-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.day-4 {
+    grid-row: span 2;
+}
+
+.day-9 {
+    grid-column: span 2;
+}
+
+.day-12 {
+    grid-column: span 2;
+}
+
+.day-18 {
+    grid-row: span 2;
+}
+
+.day-23 {
+    grid-column: span 2;
+
+}
+
+.day-24 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(52 52 52 / 0.35);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 50px 30px;
+    align-items: center;
+    font-size: 1.4rem;
+    max-width: 950px;
+    background-color: rgba(222 222 222 / 0.85);
+}
+
+.modal .close {
+    align-self: flex-end;
+    color: #050000;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal .subtext,
+.modal .sveikinimas {
+    font-size: 1.2rem;
+
+}
+
+.modal a {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: rgb(204 10 10);
+    width: 50%;
+    padding: 15px 20px;
+}
+
+.modal a:hover {
+    scale: 1.02;
+    opacity: 0.8;
+}
+
+.opened {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.opened img {
+    align-self: center;
+    width: 80px;
+}
+
+.opened span {
+    margin: 0;
+    font-size: 1.5rem;
+    align-self: flex-start;
+    padding-left: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
